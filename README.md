@@ -23,7 +23,7 @@ As ths the following arguments are the input catalogues these should be stored i
 ```bash
 
 working_directory
-├── data
+├── Data
 │   ├── hp
 │   │ 
 
