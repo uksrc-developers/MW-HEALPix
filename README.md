@@ -24,7 +24,7 @@ A description of the repo and and the code in it
 
 
 
-## Running MW-PyBDSF
+## Running MW-HEALPix
 
 
 
