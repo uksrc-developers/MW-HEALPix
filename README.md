@@ -21,6 +21,36 @@ A description of the repo and and the code in it
 
 ## Inputs and outputs
 
+*The inputs are:*
+
+The code currently takes in four inputs. These are:
+
+1.	The base directory you wish to work from
+2.	The optical catalogue to healpix stored in your `/Data` directory
+3.	The radio catalogue to healpix stored in your `/Data` directory
+4.	The radio Gaussian catalogue to healpix stored in your `/Data` directory
+
+A `/Data` directory will need to exist to run the code as this is where the outputs will go, but if the inputs are somewhere else that is fine. Just be aware this will change the input pathways that you type.
+
+*The outputs are:*
+
+The output of the healpix code is currently saving to `/yourbase/projectarea/Data/hp/`. The `/hp` folder is created and the `/Data` folder is expected to already exist. You will have to go into the script and change the word `Data`, if you want it to save to a different folder, within your “working from directory”.
+
+There are currently six catalogues outputted, where hp# is the number of the healpix region:
+
+1.	radio_hp#.fits		The radio catalogue of all sources in healpix region
+2.	gaussian_hp#.fits	The radio catalogue of all Gaussians in healpix region
+3.	optical_hp#.fits	The optical catalogue of all sources in healpix region
+4.	radio_hp#_nn.fits	The radio catalogue of all sources in healpix region and nearest neighbour regions
+5.	gaussian_hp#_nn.fits	The radio catalogue of all Gaussians in healpix region and nearest neighbour regions
+6.	optical_hp#_nn.fits	The optical catalogue of all sources in healpix region and nearest neighbour regions
+
+
+Within each radio source catalogue (radio_hp# and radio_hp#_nn) there is a column `rhpix`, which contains the healpix region number associated to the source.
+Within each radio Gaussian catalogue (gaussian_hp# and gaussian_hp#_nn) there is a column `ghpix`, which contains the healpix region number associated to the source.
+Within each optical source catalogue (optical_hp# and optical_hp#_nn) there is a column `ohpix`, which contains the healpix region number associated to the source.
+
+When it runs it will print onscreen which catalogues have been created, and which already exist. If a catalogue already exists, the code does not re-create it.
 
 
 
