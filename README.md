@@ -32,8 +32,8 @@ A description of the repo and and the code in it
 ## Future Work
 
 
-Other work will include adjustments for other platforms/forms of batching
-Profiling of the work
+The code maybe adjusted so that it creates directories for each HEALPix area. This would mean that the six output catalogues would go into an individual directory, identified by HEALPix number inside the original output directory. This change maybe added as a way to allow for easier batching in step further down the pipeline.
+
 
 ## External links
 
