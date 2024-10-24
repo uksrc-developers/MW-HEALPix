@@ -16,6 +16,14 @@ A description of the repo and and the code in it
 
 ## Directory Structure
 
+When the code is run the first argument is a working directory. Within this directory the code is expecting to find a `/Data` directory, under which the outputs will appear in the `/hp` directory. 
+
+As ths the following arguments are the input catalogues these should be stored in the `/Data` directory.
+
+Workign Directory
+      |
+      |
+      ------> Data
 
 
 
