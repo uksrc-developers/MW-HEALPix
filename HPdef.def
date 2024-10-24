@@ -1,0 +1,34 @@
+Bootstrap: docker
+From: python:3.9-slim
+
+%labels
+    Author B. Barkus
+    Version 1.002
+
+%post
+    # Update the package list and install basic utilities and dependencies
+    
+    apt-get update && apt-get install -y --no-install-recommends \
+        build-essential \
+        python3-pip \
+        libcfitsio-dev \
+        wcslib-dev \
+        && rm -rf /var/lib/apt/lists/*     # Clean to reduce image size
+
+    # Upgrade pip and install required Python packages
+    
+    pip install --upgrade pip
+    pip install numpy astropy healpy astropy-healpix matplotlib seaborn ipython
+
+%runscript
+    echo "Launching IPython shell"
+    # If no arguments are passed, run IPython in interactive mode
+    if [ $# -eq 0 ]; then
+        exec ipython
+    else
+        # Otherwise, pass any arguments to IPython (like running a script)
+        exec ipython "$@"
+    fi
+
+%help
+    This Singularity container runs Python 3.9 with numpy, astropy, and healpy installed.
