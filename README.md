@@ -20,10 +20,14 @@ When the code is run the first argument is a working directory. Within this dire
 
 As ths the following arguments are the input catalogues these should be stored in the `/Data` directory.
 
-Workign Directory
-      |
-      |
-      ------> Data
+```bash
+
+working_directory
+├── data
+│   ├── hp
+│   │ 
+
+```
 
 
 
