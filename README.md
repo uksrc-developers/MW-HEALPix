@@ -25,7 +25,7 @@ As the following arguments are the input catalogues these should be stored in th
 working_directory
 ├── Data
 │   ├── hp
-│   │ 
+│   ... 
 
 ```
 
