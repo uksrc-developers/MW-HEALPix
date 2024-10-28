@@ -10,9 +10,9 @@ The code contained in this repository use the HEALPix function ([https://healpix
 
 ## Hardware and Software
 
-Software wise, to run this code, you need only the capacity to create the singularity container, the full environment and packages are all contained within this container.
+All the software to run the code is contained inside the singularity container.
 
-Hardware wise, to run this code, it can be memory intesive depending on the size of the optical catalogue that is being loaded.
+The code can be memory intesive depending on the size of the optical catalogue that is being loaded.
 
 For LoTSS DR2 the recommended hardware requirements were:
 * 4 CPUs
