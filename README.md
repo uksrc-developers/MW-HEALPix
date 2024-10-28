@@ -87,12 +87,13 @@ To run this:
 ```bash
 singularity shell --bind /your/working/directory/Data/,/your/cloned/directory/ HPcontainer.sif
 ```
-Allows you to enter the container. Make sure the directory containing the input data and where the output data is going, and the directory which has been cloned and contains the script to run have been bound to the container. The cursor will show `Apptainer>`.
+This line enters the container. Make sure the directory containing the input data and where the output data is going, and the directory which has been cloned and contains the script to run have been bound to the container. The cursor will show `Apptainer>`.
 
 ```bash
 python /path/to/script/healpix_cats.py /path/to/working/directory/ /path/to/{optical_catalogue_name}.fits /path/to/Data/{radio_catalogue_name}.fits /path/to/{gaussian_catalogue_name}.fits
 ```
-This lone runs the HEALPix script inside the container. You need: the directory you want to work in, the optical data, the radio data, and the gaussian data.
+This line runs the HEALPix script inside the container. You need: the directory you want to work in, the optical data, the radio data, and the gaussian data.
+The names of the optical, radio, and Gaussain catalogues have to be inserted.
 
 
 ## Future Work
