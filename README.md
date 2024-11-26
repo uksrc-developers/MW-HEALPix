@@ -74,7 +74,19 @@ When it runs it will print onscreen which catalogues have been created, and whic
 
 ## Running MW-HEALPix
 
-Having cloned the repo, the container needs to be built.
+### Download the data
+
+Download the following catalogues directly from the [LOFAR-surveys](https://lofar-surveys.org/dr2_release.html) website:
+
+**Radio catalogues**
+* Non-redundant source catalogue v1.1 (with source mask information)
+* Non-redundant Gaussian catalogue v1.1
+
+Download the optical catalogue from [here](https://lofar-surveys.org/public/DR2/optical/dr2_combined.fits).
+
+### Run the code
+
+Having cloned the repo, first the container needs to be built.
 
 ```bash
 singularity build --fakeroot --force HPdef.def HPcontainer.sif
@@ -92,7 +104,7 @@ This line enters the container. Make sure the directory containing the input dat
 ```bash
 python /path/to/script/healpix_cats.py /path/to/working/directory/ /path/to/{optical_catalogue_name}.fits /path/to/Data/{radio_catalogue_name}.fits /path/to/{gaussian_catalogue_name}.fits
 ```
-This line runs the HEALPix script inside the container. You need: the directory you want to work in, the optical data, the radio data, and the gaussian data.
+This line runs the HEALPix script inside the container. You need: the directory you want to work in, the optical data, the radio source data, and the radio Gaussian data.
 The names of the optical, radio, and Gaussain catalogues have to be inserted.
 
 
